@@ -8,7 +8,7 @@ def word_count(filename):
                 wordcount[word] += 1
             else:
                 wordcount[word] = 1
-    print wordcount
+    print(wordcount)
 
 if __name__ == "__main__":
     filename = "wordcount.txt"
