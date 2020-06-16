@@ -1,22 +1,36 @@
 #!/usr/bin/python
 # Write a Python program that matches a string that has an a followed by zero or more b's
+#Write a Python program that matches a string that has an a followed by one or more b's.
 import re
 
-def ab_pattern_search(test_string):
+def zero_or_more_ab(test_string):
     '''
-    Function to find the if a string has pattern like ab ,abb...
+    Function that matches a string that has an a followed by zero or more b's
     '''
-    # * matches ab followed by zero or more characters
+    # * matches ab followed by zero or more b character
     pattern = re.compile('ab*')
     if pattern.search(test_string):
-        print("Valid string {}".format(test_string))
+        print("{} is valid string with 'a' followed by zero or more b's".format(test_string))
     else:
-        print("Invalid string {0}".format(test_string))
+        print("{} is invalid string with 'a' not followed by zero or more b's".format(test_string))
 
+def one_or_more_ab(test_string):
+    '''
+    Function that matches a string that has an a followed by one or more b's.
+    '''
+    # * matches ab followed by zero or more b character
+    pattern = re.compile('ab+')
+    if pattern.search(test_string):
+        print("{} is valid string that has an 'a' followed by one or more b's ".format(test_string))
+    else:
+        print("{} is invalid string do not has an 'a' followed by one or more b's ".format(test_string))
 if __name__ == '__main__':
-    ab_pattern_search('ac')
-    ab_pattern_search('ddabb')
-    ab_pattern_search('###abb')
-    ab_pattern_search('pick')
-    ab_pattern_search('abc')
+    zero_or_more_ab('ac')
+    zero_or_more_ab('ddabb')
+    zero_or_more_ab('###abb')
+    zero_or_more_ab('pick')
+    zero_or_more_ab('abc')
 
+    one_or_more_ab('ac')
+    one_or_more_ab('abc')
+    one_or_more_ab('abc')
