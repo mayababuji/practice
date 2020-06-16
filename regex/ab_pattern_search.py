@@ -8,7 +8,7 @@ def zero_or_more_ab(test_string):
     Function that matches a string that has an a followed by zero or more b's
     '''
     # * matches ab followed by zero or more b character
-    pattern = re.compile('ab*')
+    pattern = re.compile('ab?')
     if pattern.search(test_string):
         print("{} is valid string with 'a' followed by zero or more b's".format(test_string))
     else:
@@ -18,7 +18,7 @@ def one_or_more_ab(test_string):
     '''
     Function that matches a string that has an a followed by one or more b's.
     '''
-    # * matches ab followed by zero or more b character
+    # + matches ab followed by one or more b character
     pattern = re.compile('ab+')
     if pattern.search(test_string):
         print("{} is valid string that has an 'a' followed by one or more b's ".format(test_string))
