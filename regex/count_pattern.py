@@ -18,7 +18,8 @@ def count_pattern(data,pattern):
     return result
 
 if __name__ == '__main__':
-     data = ["/mnt/volume1/vol/img.img", "/mnt/volume1/val2.img", "/mnt/volume2/val1.img"]
+     data = ["/mnt/volume1/vol/img.img", "/mnt/volume1/val2.img",
+             "/mnt/volume2/val1.img"]
      pattern = "volume1"
      count_pattern = count_pattern(data,pattern)
      print(count_pattern)

@@ -5,7 +5,7 @@
 #Step 2 Defining  API end point (for POST and PUT) and url (for GET from GIT)
 #Step 3 Defining task,task to update to be send to the api
 #Step 4 Sending post request  to endpoint 'https://httpbin.org/post'
-#Step 5 Sending POST request to rename practice repo to practice_python of GitHub repo
+#Step 5 Sending POST request to rename practice repo to practice_python_git of GitHub repo
 #Step 6 Sending PUT request endpoint to https://httpbin.org/post end point
 import requests
 import json
@@ -25,7 +25,7 @@ task_updated = {
   "line": None
 }
 
-data = json.dumps({'name':'practice_python', 'description':'all python practice'})
+data = json.dumps({'name':'practice_python_git', 'description':'all python practice'})
 
 #GET request samples
 resp_get = requests.get(url)
@@ -37,7 +37,7 @@ resp_post = requests.post(url=API_ENDPOINT, json=task)
 print("The POST response in text format is {0}".format(resp_post.text))
 print("The POST response in json format is {0}".format(resp_post.json()))
 
-#POST request sample to rename practice repo to practice_python of GitHub repo
+#POST request sample to rename practice repo to practice_python_git of GitHub repo
 resp_post_git = requests.post(url, data, auth=('user-name','password'))
 print(resp_post_git.status_code)
 
